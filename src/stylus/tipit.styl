@@ -1,0 +1,113 @@
+// ************** MIXINS ************** //
+
+prefix( s, args... )
+	for i in -webkit- -moz- -ms- -o-
+		{ i }{ s } args
+
+	{ s } args
+
+transition()
+	prefix( 'transition', arguments )
+
+transform()
+	prefix( 'transform', arguments )
+
+box-sizing()
+	prefix( 'box-sizing', arguments )
+
+// ************** END OF MIXINS ************** //
+// ************** DEFAULT CLASSES ************** //
+
+for i in ( db block ) ( dib inline-block ) ( dn none ) ( di inline )
+	.{ i[ 0 ] }
+		display i[ 1 ]
+
+for i in ( abs absolute ) ( rel relative ) ( fix fixed )
+	.{ i[ 0 ] }
+		position i[ 1 ]
+
+// ************** END OF DEFAULT CLASSES ************** //
+// ************** VARIABLES ************** //
+
+$font-family = tahoma, sans-serif
+
+$timing-fn = cubic-bezier( .43, 1.20, .8, 1.15 )
+
+// ************** END OF VARIABLES ************** //
+// ************** STYLES ************** //
+
+.tipit
+	@extends .abs
+	color #fff
+	padding 2px
+	background #333
+	background rgba( #000, .7 )
+	visibility hidden
+	opacity 0
+	z-index 150
+	padding 10px
+	font 13px $font-family
+	transform scale( 0 )
+	transition .25s transform, .25s opacity, .25s visibility
+	transition .25s -ms-transform, .25s opacity, .25s visibility
+	transition-timing-function $timing-fn
+
+	&.left
+		prefix( 'transform-origin', '100% 50%' )
+
+	&.right
+		prefix( 'transform-origin', '0 50%' )
+
+	&.top
+		prefix( 'transform-origin', '50% 100%' )
+
+	&.bottom
+		prefix( 'transform-origin', '50% 0' )
+
+	&.fx
+		opacity 1
+		visibility visible
+		transform none
+
+	&:before
+		@extends .abs
+		content ''
+		border 6px solid transparent
+
+	&.left:before
+		border-left-color #333
+		border-left-color rgba( #000, .7 )
+		top 50%
+		right 0
+		margin-right -12px
+		margin-top -6px
+
+	&.right:before
+		border-right-color #333
+		border-right-color rgba( #000, .7 )
+		top 50%
+		left 0
+		margin-left -12px
+		margin-top -6px
+
+	&.top:before
+		border-top-color #333
+		border-top-color rgba( #000, .7 )
+		bottom 0
+		left 50%
+		margin-left -6px
+		margin-bottom -12px
+
+	&.bottom:before
+		border-bottom-color #333
+		border-bottom-color rgba( #000, .7 )
+		top 0
+		left 50%
+		margin-left -6px
+		margin-top -12px
+
+	> *
+		prefix( 'pointer-events', 'none' )
+
+
+// ************** END OF STYLES ************** //
