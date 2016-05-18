@@ -62,9 +62,9 @@ if you wanna make tooltips on your own timing ( like, after some ajax loaded and
 ```
 
 $( 'div' ).tipit();
-// You have to write configs as mentioned [here](#2-add-some-config)
 
 ```
+You have to write configs of that element as mentioned [here](#2-add-some-config)
 
 ## API
 
