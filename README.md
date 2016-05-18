@@ -7,7 +7,7 @@ an Easy-to-use tooltip system that has a nice interface for both users and devel
 ### 1. Import two files to your project:
 
 on any workflow you're working, you may have access to load some files into it.
-so include **css** and **js** of *tipIt*. but there's just one point:
+so include **css** and **js** of *tipIt* ( you've included jQuery already ). but there's just one point:
 
 > If you want to use automatic tooltip making, you should put the script tag before closing `</body>`
 
