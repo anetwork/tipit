@@ -3,19 +3,17 @@
 	'use strict';
 
 	var gulp = require( 'gulp' ),
+
 		stylus = require( 'gulp-stylus' ),
-
 		watch = require( 'gulp-watch' ),
-
 		plumber = require( 'gulp-plumber' ),
-
         uglify = require( 'gulp-uglify' ),
 
 		stylusPath = 'src/stylus',
-		cssPath = 'build/css',
+		cssPath = 'dist/css',
 
         jsPath = 'src/js',
-        minifiedJsPath = 'build/js',
+        minifiedJsPath = 'dist/js',
 
         COMPRESS = true;
 
