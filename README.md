@@ -1,3 +1,5 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/anetwork/tipit/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/anetwork/tipit/?branch=master)
+
 # tipIt
 
 an Easy-to-use tooltip system that has a nice interface for both users and developers!
