@@ -1,0 +1,12 @@
+T E A M  {
+
+    Core developer: {
+
+        name: Reiha Hosseini,
+        contact: mr [ at ] reiha.net,
+        github: @mrReiha,
+        from: Tehran, Iran
+
+    }
+
+}

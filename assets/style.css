@@ -17,21 +17,123 @@ html, body {
     padding: 0;
     font-family: "Open sans", tahoma;
     color: #333;
+    counter-reset: ex-count;
 }
+
+.oh { overflow: hidden; }
 
 .cont {
     margin: auto;
     width: 960px;
 }
 
-header {
+header, footer {
     padding: 80px 0;
     background: #f8f8f8;
     border-bottom: 1px solid #e9e9e9;
 }
 
+footer {
+    margin-top: 100px;
+    border-bottom: none;
+    border-top: 1px solid #e9e9e9;
+}
+
+    footer a, footer span {
+        color: #999;
+        text-decoration: none;
+    }
+
+    footer span {
+        float: right;
+    }
+
+    footer a + a {
+        margin-left: 40px;
+    }
+
+    footer a:hover, footer a:focus {
+        color: #666;
+    }
+
 h1 {
     text-align: center;
     font-weight: normal;
     margin: 0;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 28px;
+    counter-increment: ex-count;
+    margin-top: 50px;
+}
+h2:before {
+    content: counter( ex-count ) '.';
+    padding-right: 10px;
+    font-size: 18px;
+    color: #999;
+}
+
+.ex {
+    border: 1px solid #e9e9e9;
+    background: #f8f8f8;
+    text-align: center;
+    padding: 40px;
+}
+.ex.half {
+    width: 47%;
+    float: left;
+}
+    .ex span {
+        padding: 10px;
+        background: #5A2C81;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+.ex.half + * {
+    float: right;
+    width: 50%;
+    margin-left: 3%;
+    display: block;
+}
+
+.ex.half + code {
+    padding: 30px 15px 50px;
+    font-size: 16px;
+    line-height: 1.8;
+    background: #333;
+    white-space: nowrap;
+    overflow: auto;
+    height: 105px;
+    color: #fff;
+}
+
+code .note {
+    color: #ffc77e;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.man .ex + div {
+    text-align: center;
+}
+
+button {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin-left: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: "Open sans";
 }
