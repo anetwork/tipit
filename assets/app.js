@@ -7,6 +7,8 @@
 
         changeTipIt = function( e ) {
 
+            this.placeholder = 'If left this blank, tipit won\'t show anything';
+
             liveTipLM.setAttribute( 'data-tipit-content', inputLM.value );
 
             liveTipLM.innerHTML = 'Hover me Again!'
