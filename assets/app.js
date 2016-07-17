@@ -7,7 +7,7 @@
 
         changeTipIt = function( e ) {
 
-            tipLM.setAttribute( 'data-tipit-content', inputLM.value );
+            liveTipLM.setAttribute( 'data-tipit-content', inputLM.value );
 
             liveTipLM.innerHTML = 'Hover me Again!'
 
